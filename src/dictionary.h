@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <ext/hash_map>
+#include <algorithm>
 #include "dictionary.h"
 #include "dictionaryTerm.h"
 #include "binaryExpressionTree.h"

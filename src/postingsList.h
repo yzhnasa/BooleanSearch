@@ -12,8 +12,8 @@ class PostingsList{
     public:
         explicit PostingsList();
         void setPostingItem(PostingItem *postingItem);
-        PostingItem *getPostingItem(int index);
-        int getPostingItemsSize();
+        PostingItem *getPostingItem(unsigned int index);
+        unsigned int getPostingItemsSize();
         static bool comparePostingItem(PostingItem *itemA, PostingItem *itemB);
         void sortPostingsList();
         ~PostingsList();

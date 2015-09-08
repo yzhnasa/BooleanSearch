@@ -9,19 +9,19 @@ using namespace std;
 class DictionaryTerm{
     private:
         string term;
-        int frequency;
+        unsigned int frequency;
         vector<PostingItem *> postingItems;
     public:
         explicit DictionaryTerm();
         explicit DictionaryTerm(string term);
         void setTerm(string term);
         string getTerm();
-        void setFrequency(int frequency);
+        void setFrequency(unsigned int frequency);
         void frequencyIncreasingOne();
         int getFrequency();
         void setPostingItem(PostingItem *postingItem);
-        PostingItem *getPostingItem(int index);
-        int getPostingItemsSize();
+        PostingItem *getPostingItem(unsigned int index);
+        unsigned int getPostingItemsSize();
         ~DictionaryTerm();
 };
 #endif

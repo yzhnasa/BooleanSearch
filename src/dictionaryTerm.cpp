@@ -19,7 +19,7 @@ string DictionaryTerm::getTerm(){
      return this->term;
 }
 
-void DictionaryTerm::setFrequency(int frequency){
+void DictionaryTerm::setFrequency(unsigned int frequency){
     this->frequency = frequency;
 }
 
@@ -35,11 +35,11 @@ void DictionaryTerm::setPostingItem(PostingItem *postingItem){
     postingItems.push_back(postingItem);
 }
 
-PostingItem *DictionaryTerm::getPostingItem(int index){
+PostingItem *DictionaryTerm::getPostingItem(unsigned int index){
      return this->postingItems.at(index);
 }
 
-int DictionaryTerm::getPostingItemsSize(){
+unsigned int DictionaryTerm::getPostingItemsSize(){
      return this->postingItems.size();
 }
 

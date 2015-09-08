@@ -42,6 +42,18 @@ bool QueryToken::isTokenOperatorType(){
      return false;
 }
 
+bool QueryToken::isTokenLeftBracketType(){
+     if(this->tokenType == LEFT_BRACKET_TYPE)
+         return true;
+     return false;
+}
+
+bool QueryToken::isTokenRightBracketType(){
+     if(this->tokenType == RIGHT_BRACKET_TYPE)
+         return true;
+     return false;
+}
+
 void QueryToken::setOperatorType(int operatorType){
      this->operatorType = operatorType;
 }

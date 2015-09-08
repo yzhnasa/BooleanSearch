@@ -8,11 +8,11 @@ void PostingsList::setPostingItem(PostingItem *postingItem){
     this->postingItems.push_back(postingItem);
 }
 
-PostingItem *PostingsList::getPostingItem(int index){
+PostingItem *PostingsList::getPostingItem(unsigned int index){
     return this->postingItems.at(index);
 }
 
-int PostingsList::getPostingItemsSize(){
+unsigned int PostingsList::getPostingItemsSize(){
      return this->postingItems.size();
 }
 

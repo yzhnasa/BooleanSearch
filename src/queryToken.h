@@ -4,6 +4,8 @@
 #define TOK_NULL_TYPE       0
 #define QUERY_TYPE          1
 #define OPERATOR_TYPE       2
+#define LEFT_BRACKET_TYPE   3
+#define RIGHT_BRACKET_TYPE  4
 
 #define OP_NULL_TYPE        0
 #define AND_TYPE            1
@@ -16,7 +18,7 @@ using namespace std;
 class QueryToken{
     private:
         string token;
-        int tokenType; // Two type: query string, operator.
+        int tokenType; // Two type: query string, operator, left bracket, right bracket.
         int operatorType; // Three type: AND, OR, NOT.
         //QueryToken *nextQueryToken;
         QueryToken *leftNextQueryToken;
@@ -30,6 +32,8 @@ class QueryToken{
         int getTokenType();
         bool isTokenQueryType();
         bool isTokenOperatorType();
+        bool isTokenLeftBracketType();
+        bool isTokenRightBracketType();
         void setOperatorType(int operatorType);
         int getOperatorType();
         bool isAndType();

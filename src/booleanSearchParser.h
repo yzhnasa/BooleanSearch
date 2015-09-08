@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 #include "postingItem.h"
 #include "postingsList.h"
 #include "dictionaryTerm.h"
@@ -15,8 +16,10 @@ using namespace std;
 class BooleanSearchParser{
     public:
         static vector<string> *tokenizer(string textString);
-        static BinaryExpressionTree *parseringQueryStringBuildBinaryExpressionTree(vector<string> *queryToken);
+        static int checkTokenType(string queryString);
+        static int checkOperatorType(string queryString);
+        static BinaryExpressionTree *parseringQueryStringBuildBinaryExpressionTree(vector<string> &queryString);
         static PostingsList *parseringFileBuildPostingsList(string filename);
-        static Dictionary *buildDictionary(PostingsList *postingsList);
+        static void buildDictionary(Dictionary &dictionary, PostingsList &postingsList);
 };
 #endif
